@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage[authoryear]{natbib}   
+\bibpunct{(}{)}{;}{a}{,}{,}
+\usepackage{hyperref}
+\pdfstringdefDisableCommands{%
+  \def\nu{nu}%
+}          
+\usepackage[spanish]{babel} 
+\renewcommand{\abstractname}{Resumen} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Márgenes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Título y autor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{¿Un sistema imposible? Análisis Dinámico del sistema exoplanetario $\nu$ Octantis}}
+
+
+\author{Víctor Rubén Sandez \\
+\small Universidad Nacional de Córdoba \\
+\small Facultad de Matemática, Astronomía, Física y Computación (FAMAF) \\
+\small Observatorio Astronómico de Córdoba (OAC) \\
+\small Instituto de Astronomía Teórica y Experimental (IATE), CONICET-UNC \\
+\small Córdoba, Argentina \\
+\small \texttt{ruben.sandez@unc.edu.ar}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resumen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Este informe presenta un análisis dinámico del sistema exoplanetario $\nu$ Octantis, una configuración jerárquica que comprende una estrella binaria y al menos un planeta circumbinario. El objetivo principal es evaluar la viabilidad y la evolución a largo plazo de este sistema, cuyo origen es un desafío para los modelos de formación planetaria convencionales. Para ello, se ha empleado el integrador numérico de N-cuerpos NCORP, una herramienta computacional que permite resolver las ecuaciones del movimiento con alta precisión. La metodología abarca el análisis de la geometría orbital a corto plazo, la cartografía de las regiones de estabilidad dinámica, el impacto de la evolución secular por efectos de marea y el estudio de las interacciones gravitacionales a escalas de tiempo de hasta $10^{6}$ años. Las conclusiones clave de este estudio revelan que, si bien el sistema puede exhibir una estabilidad aparente en escalas de tiempo cortas, su configuración actual es precaria y dinámicamente inestable a largo plazo. Este hallazgo refuerza la hipótesis de que el sistema no se formó de manera coetánea, sino que probablemente es el resultado de un evento de captura dinámica o dispersión gravitacional, lo que plantea interrogantes fundamentales sobre su origen y su existencia futura.
+\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCCIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+
+El estudio de sistemas exoplanetarios complejos, particularmente aquellos que incluyen múltiples estrellas y planetas en configuraciones jerárquicas, constituye una de las fronteras más activas de la Mecánica Celeste contemporánea. Sistemas como $\nu$ Octantis, compuestos por una estrella binaria y un planeta en órbita circumbinaria, representan laboratorios naturales de incalculable valor. Estos sistemas nos permiten poner a prueba las teorías de formación planetaria, estabilidad orbital y evolución dinámica en regímenes gravitacionales que difieren significativamente de nuestro propio Sistema Solar. La compleja interacción de fuerzas en $\nu$ Octantis lo convierte en un caso de estudio paradigmático para comprender los límites de la estabilidad y los procesos no convencionales que pueden dar origen a arquitecturas planetarias exóticas.
+
+\subsection{¿Qué es \texorpdfstring{$\nu$}{nu} Octantis?}
+
+El sistema $\nu$ Octantis (HD 205874) es conocido desde hace décadas, con observaciones iniciales que datan de mediados del siglo XX \citep{wilson1953general}. Se trata de una estrella binaria visual situada a una distancia de aproximadamente 19.4 parsecs (paralaje de 51.5172 mas)\citep{collaboration2018gaia}. El componente principal, $\nu$ Octantis A, es una estrella gigante de tipo espectral K1III, mientras que su compañera es una estrella menos masiva. Las mediciones astrométricas de alta precisión, en gran parte gracias a la misión Hipparcos, han sido cruciales para caracterizar el movimiento orbital de la binaria y la fotometría del sistema.
+
+El descubrimiento de un exoplaneta de masa joviana en una órbita amplia alrededor de la estrella primaria, basado en mediciones de velocidad radial, ha añadido una capa de complejidad dinámica. Los parámetros orbitales conocidos del planeta, derivados de estudios como los de \cite{ramm2009spectroscopic}, lo sitúan en una configuración que desafía los modelos de formación in-situ, dada la presencia cercana de la estrella secundaria.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/nu_octantis_system.jpg}
+    \caption{Representación esquemática del sistema $\nu$ Octantis, mostrando la estrella binaria y la órbita del planeta circumbinario. (Imagen ilustrativa basada en datos de \cite{ramm2009spectroscopic})}
+    \label{fig:nu_octantis_system}
+\end{figure}
+
+\subsection{¿Cual es el problema con \texorpdfstring{$\nu$}{nu} Octantis?}
+
+El principal desafío que presenta $\nu$ Octantis radica en su improbable origen. Como se detalla en estudios recientes \cite{gozdziewski2013testing}, una formación coetánea del planeta y la estrella binaria en sus órbitas actuales es considerada "inverosímil" (unbelievable). Los modelos de formación de planetas en discos protoplanetarios circumbinarios predicen que las perturbaciones gravitacionales de la estrella secundaria habrían impedido la acreción de un gigante gaseoso en la ubicación observada.
+Este escenario ha llevado a la formulación de hipótesis alternativas, más exóticas pero dinámicamente más plausibles. Entre ellas destacan:
+
+\begin{itemize}
+    \item Formación en un entorno diferente: El planeta podría haberse formado en una región más estable del sistema o incluso en otro sistema estelar, siendo posteriormente desplazado a su órbita actual mediante interacciones gravitacionales complejas.
+    \item Captura dinámica: El planeta podría haber sido capturado por la estrella binaria tras un encuentro cercano con otro sistema estelar, lo que explicaría su presencia en una órbita que no se alinea con los modelos de formación convencionales.
+    \item Dispersión gravitacional: Un evento violento, como el paso cercano de otra estrella, podría haber alterado drásticamente la arquitectura de un sistema planetario preexistente, moviendo el planeta a su órbita actual.
+\end{itemize}
+Estas hipótesis sugieren que el sistema podría encontrarse en un estado dinámicamente joven o transitorio, cuya estabilidad a largo plazo no está garantizada.
+
+\subsection{Objetivos del informe}
+
+El propósito de este trabajo es realizar un análisis dinámico exhaustivo del sistema $\nu$ Octantis para evaluar su comportamiento y viabilidad a lo largo del tiempo. Para ello, se utilizará el integrador numérico NCORP. Los objetivos específicos son:
+\begin{enumerate}
+    \item Caracterizar la geometría orbital a corto plazo del planeta bajo la influencia de la estrella binaria.
+    \item Identificar las regiones de estabilidad dinámica del sistema.
+    \item Evaluar el impacto de la evolución secular por efectos de marea en los elementos orbitales.
+    \item Analizar las interacciones gravitacionales a escalas de tiempo de hasta $10^{6}$ años.
+\end{enumerate}
+
+Este análisis casi detallado es fundamental para discernir entre los posibles escenarios de origen y predecir el destino final de este fascinante sistema.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METODOLOGÍA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodología}
+
+La Mecánica Celeste moderna depende de manera crítica de la simulación numérica para abordar problemas que carecen de soluciones analíticas exactas, como el problema de N-cuerpos. Mientras que los modelos analíticos ofrecen una descripción general y aproximada, herramientas computacionales como los integradores numéricos son esenciales para explorar la evolución detallada y a largo plazo de sistemas complejos como $\nu$ Octantis. Estos métodos permiten integrar las ecuaciones del movimiento paso a paso, revelando comportamientos caóticos, resonancias y efectos seculares que serían inaccesibles mediante enfoques puramente teóricos.
+
+\subsection{El integrador numérico \textit{Ncorp}}
+
+Para este estudio, se ha utilizado el software NCORP, un código de N-cuerpos de alto rendimiento escrito en Fortran 90\citep{}. NCORP está diseñado para resolver las ecuaciones del movimiento gravitacional mediante la implementación de métodos de integración numérica de alta precisión.
+
+NCORP emplea diversos esquemas de integración, incluyendo el método de Runge-Kutta y el método de Leapfrog. Además, el código está optimizado para manejar sistemas con un gran número de cuerpos. Esto es particularmente relevante para simular sistemas estelares y planetarios donde las interacciones gravitacionales son complejas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFÍA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plainnat} 
+\bibliography{bibliografia}
+
+
+\end{document}
