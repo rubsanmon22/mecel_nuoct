@@ -19,8 +19,8 @@
 
    integrator (radau, bs, rk)             : bs
    initial time for integration           : 0.0
-   total integration time                 : 287.0
-   output time interval                   : 0.0001136
+   total integration time                 : 1.0e6
+   output time interval                   : 1.0e3
    number of logscale outputs (>=0)       : 0
    precision (digits per step)            : 13
    initial time step (-1 for auto)        : -1.0

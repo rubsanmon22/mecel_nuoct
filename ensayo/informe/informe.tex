@@ -1,19 +1,27 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}            % <-- añadido
 \usepackage[spanish]{babel} 
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\usepackage{caption}
+\captionsetup[table]{name=Tabla}
+\usepackage{lmodern}                % Mejor fuente
+\usepackage{setspace}
+\onehalfspacing
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
 \usepackage[authoryear]{natbib}   
 \bibpunct{(}{)}{;}{a}{,}{,}
 \usepackage{hyperref}
 \pdfstringdefDisableCommands{%
   \def\nu{nu}%
 }          
-\usepackage[spanish]{babel} 
 \renewcommand{\abstractname}{Resumen} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,9 +116,54 @@ La Mecánica Celeste moderna depende de manera crítica de la simulación numér
 
 \subsection{El integrador numérico \textit{Ncorp}}
 
-Para este estudio, se ha utilizado el software NCORP, un código de N-cuerpos de alto rendimiento escrito en Fortran 90\citep{}. NCORP está diseñado para resolver las ecuaciones del movimiento gravitacional mediante la implementación de métodos de integración numérica de alta precisión.
+Para este estudio, se ha utilizado el software NCORP, un código de N-cuerpos de alto rendimiento escrito en Fortran 90. NCORP está diseñado para resolver las ecuaciones del movimiento gravitacional mediante la implementación de métodos de integración numérica de alta precisión.
 
 NCORP emplea diversos esquemas de integración, incluyendo el método de Runge-Kutta y el método de Leapfrog. Además, el código está optimizado para manejar sistemas con un gran número de cuerpos. Esto es particularmente relevante para simular sistemas estelares y planetarios donde las interacciones gravitacionales son complejas.
+
+\subsection{Condiciones iniciales del problema}
+
+Las condiciones iniciales para las simulaciones se basan en los parámetros orbitales observados del sistema $\nu$ Octantis, tal como se reporta en \cite{ramm2009spectroscopic} y \cite{gozdziewski2013testing}. Estos incluyen las masas de las estrellas y el planeta, así como sus elementos orbitales (semieje mayor, excentricidad, inclinación, argumento del periastro, longitud del nodo ascendente y anomalía verdadera).
+
+El modelo físico primario implementado es el problema gravitacional de N-cuerpos Newtoniano, que describe la evolución del sistema bajo la influencia de la gravedad mutua de todos sus componentes. Para manejar adecuadamente la estructura jerárquica del sistema (un planeta orbitando una binaria compacta), las simulaciones se realizan utilizando coordenadas de Jacobi. Este sistema de coordenadas es ideal para minimizar los errores de redondeo en sistemas donde las distancias varían en varios órdenes de magnitud.
+Las condiciones iniciales (masas y elementos orbitales) utilizadas en las simulaciones se basan en los datos observacionales más recientes disponibles (ver Tabla \ref{tab:initial_conditions}).
+
+\begin{table}[h]  % especificar posiciones
+\centering
+\small               % reduce tamaño si es necesario
+\begin{tabularx}{\textwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+Parámetro & $\nu$ Oct A (Estrella Primaria) & $\nu$ Oct B (Estrella Secundaria) & $\nu$ Oct Ab (Planeta) \\ \hline
+Masa ($M_\odot$)               & 1.30 & 0.50           & 0.0025 (2.6 MJ) \\ \hline
+Semieje mayor (au)      & -    & 2.55           & 2.53            \\ \hline
+Excentricidad           & -    & 0.24           & 0.12            \\ \hline
+Inclinación (°)         & -    & 105            & 95              \\ \hline
+Long. Nodo Asc. (°)     & -    & 0 (referencia) & 180             \\ \hline
+Arg. del Pericentro (°) & -    & 120            & 310             \\ \hline
+Anomalía Media (°)      & -    & 0              & 0               \\ \hline
+\end{tabularx}
+\caption{Los valores presentados representan un único caso de estudio representativo, derivado de las restricciones observacionales, para el propósito de este análisis numérico, y no constituyen la solución de mejor ajuste definitiva. Los elementos orbitales son referenciados respecto al centro de masa del sistema interior correspondiente, como es estándar en coordenadas de Jacobi.}
+
+\label{tab:initial_conditions}
+\end{table}
+
+\subsection{Marco de Análisis}
+
+La salida de las simulaciones numéricas se procesa para evaluar los objetivos del informe. Primero se estudian las orbitas de los cuerpos graficando las posiciones de los mismos en función del tiempo. La estabilidad del sistema se evalúa mediante el uso. La evolución de los elementos orbitales osculadores (semieje mayor, excentricidad, etc.) se registra a lo largo del tiempo para analizar las tendencias seculares. Finalmente, se aplica un análisis de Fourier a estas series temporales para identificar las frecuencias dominantes que caracterizan la dinámica secular del sistema.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DESARROLLO Y RESULTADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo y Resultados}
+
+\subsection{Análisis de la geometría orbital a corto plazo}
+
+\subsection{Mapeo de las regiones de estabilidad dinámica}
+
+\subsection{Impacto de la evolución secular por efectos de marea}
+
+\subsection{Interacciones gravitacionales a escalas de tiempo de hasta \texorpdfstring{$10^{6}$} años}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
