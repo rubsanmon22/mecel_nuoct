@@ -19,8 +19,8 @@
 
    integrator (radau, bs, rk)             : bs
    initial time for integration           : 0.0
-   total integration time                 : 1.0e6
-   output time interval                   : 1.0e3
+   total integration time                 : 200
+   output time interval                   : 1
    number of logscale outputs (>=0)       : 0
    precision (digits per step)            : 13
    initial time step (-1 for auto)        : -1.0
@@ -29,7 +29,7 @@
 -------------------------------------------------------------------------------
 <> The Primary - 
 
-   mass of primary (in mass units)        : 1.40
+   mass of primary (in mass units)        : 1.61
    radius of primary [km]                 : 590000.0
    rotational period of primary [days]    : 27.8
    modified J2 (i.e. J2*R^2) (no if <=0)  : 0.0

@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex informe"] 1763519829.75335 "informe.aux" "informe.bbl" "informe" 1763519830.19538 0
+["bibtex informe"] 1763519829.75335 "informe.aux" "informe.bbl" "informe" 1763750788.25812 0
   "./bibliografia.bib" 1763433301.18051 1375 96da455ee5e43c3de0f52a50d803199c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "informe.aux" 1763519830.10921 4489 dde413843a536c290e2777486ef49337 "pdflatex"
+  "informe.aux" 1763750788.16471 4489 dde413843a536c290e2777486ef49337 "pdflatex"
   (generated)
   "informe.bbl"
   "informe.blg"
   (rewritten before read)
-["pdflatex"] 1763519829.79495 "/home/rubsanmon/Escritorio/facultad/4to/2c/mecel/mecel_nuoct/ensayo/informe/informe.tex" "informe.pdf" "informe" 1763519830.19552 0
+["pdflatex"] 1763750787.83807 "/home/rubsanmon/Escritorio/facultad/4to/2c/mecel/mecel_nuoct/ensayo/informe/informe.tex" "informe.pdf" "informe" 1763750788.25827 0
   "/etc/texmf/web2c/texmf.cnf" 1761267108.00449 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/rubsanmon/Escritorio/facultad/4to/2c/mecel/mecel_nuoct/ensayo/informe/informe.tex" 1763519828.85621 13351 dee8320dc9eceb4bf11e1a74653b986c ""
+  "/home/rubsanmon/Escritorio/facultad/4to/2c/mecel/mecel_nuoct/ensayo/informe/informe.tex" 1763750787.65539 13364 c5d66ef27589289d985311d0f8cf7082 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -142,10 +142,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761434337.20149 325460 1cee8f8dee02d4e22d8f26e9f8df0176 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763431470 6822818 90f667d5d85b1e4c31f22590380e1f41 ""
   "imgs/nu_octantis_system.jpg" 1763433555.80405 13035 052f2710716bdaf5d4e461da6ae44030 ""
-  "informe.aux" 1763519830.10921 4489 dde413843a536c290e2777486ef49337 "pdflatex"
+  "informe.aux" 1763750788.16471 4489 dde413843a536c290e2777486ef49337 "pdflatex"
   "informe.bbl" 1763519829.79021 1693 ef47e07b405a042361ce98470d45104a "bibtex informe"
-  "informe.out" 1763519830.11021 2934 13e36bb24da4a892bc5b3eeead8f9c04 "pdflatex"
-  "informe.tex" 1763519828.85621 13351 dee8320dc9eceb4bf11e1a74653b986c ""
+  "informe.out" 1763750788.16571 2934 13e36bb24da4a892bc5b3eeead8f9c04 "pdflatex"
+  "informe.tex" 1763750787.65539 13364 c5d66ef27589289d985311d0f8cf7082 ""
   (generated)
   "informe.aux"
   "informe.log"

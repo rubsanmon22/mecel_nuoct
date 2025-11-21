@@ -29,7 +29,7 @@
 -------------------------------------------------------------------------------
 <> The Primary - 
 
-   mass of primary (in mass units)        : 1.40
+   mass of primary (in mass units)        : 1.61
    radius of primary [km]                 : 590000.0
    rotational period of primary [days]    : 27.8
    modified J2 (i.e. J2*R^2) (no if <=0)  : 0.0
