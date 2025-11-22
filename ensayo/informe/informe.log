@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.17)  21 NOV 2025 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.17)  22 NOV 2025 01:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -490,13 +490,137 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 69.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-<imgs/nu_octantis_system.jpg, id=76, 672.5125pt x 437.635pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+<imgs/nu_octantis_system.jpg, id=74, 672.5125pt x 437.635pt>
 File: imgs/nu_octantis_system.jpg Graphic file (type jpg)
 <use imgs/nu_octantis_system.jpg>
 Package pdftex.def Info: imgs/nu_octantis_system.jpg  used on input line 79.
 (pdftex.def)             Requested size: 318.66948pt x 207.37126pt.
- [2 <./imgs/nu_octantis_system.jpg>] [3] (/usr/share/texmf/tex/latex/lm/ts1lmr.fd) (./informe.bbl [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]) [5] (./informe.aux
+ [2 <./imgs/nu_octantis_system.jpg>] [3{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (/usr/share/texmf/tex/latex/lm/ts1lmr.fd) [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+<../nuoct/analisis/1-orbitas/orbitas.png, id=122, 570.2103pt x 569.2467pt>
+File: ../nuoct/analisis/1-orbitas/orbitas.png Graphic file (type png)
+<use ../nuoct/analisis/1-orbitas/orbitas.png>
+Package pdftex.def Info: ../nuoct/analisis/1-orbitas/orbitas.png  used on input line 168.
+(pdftex.def)             Requested size: 427.93057pt x 427.22061pt.
+ [5 <../nuoct/analisis/1-orbitas/orbitas.png>]
+<../nuoct/analisis/2-estabilidad/particles_evolution.png, id=135, 722.7pt x 650.43pt>
+File: ../nuoct/analisis/2-estabilidad/particles_evolution.png Graphic file (type png)
+<use ../nuoct/analisis/2-estabilidad/particles_evolution.png>
+Package pdftex.def Info: ../nuoct/analisis/2-estabilidad/particles_evolution.png  used on input line 185.
+(pdftex.def)             Requested size: 427.93057pt x 385.13983pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
+<../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png, id=144, 859.2903pt x 826.7688pt>
+File: ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png Graphic file (type png)
+<use ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png>
+Package pdftex.def Info: ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png  used on input line 205.
+(pdftex.def)             Requested size: 455.24411pt x 438.00876pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <../nuoct/analisis/2-estabilidad/particles_evolution.png>]
+<../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png, id=154, 859.2903pt x 826.7688pt>
+File: ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png Graphic file (type png)
+<use ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png>
+Package pdftex.def Info: ../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png  used on input line 214.
+(pdftex.def)             Requested size: 455.24411pt x 438.00876pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png>]
+<../nuoct/analisis/4-secular/secular_plots/a_secular_plot.png, id=175, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/a_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/a_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/a_secular_plot.png  used on input line 228.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/e_secular_plot.png, id=176, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/e_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/e_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/e_secular_plot.png  used on input line 235.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png, id=177, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png  used on input line 242.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png, id=178, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png  used on input line 249.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png, id=179, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png  used on input line 256.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png, id=180, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png  used on input line 263.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png, id=181, 867.24pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png  used on input line 270.
+(pdftex.def)             Requested size: 455.24411pt x 151.74721pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png, id=188, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png  used on input line 279.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png, id=189, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png  used on input line 286.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png, id=190, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png  used on input line 293.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png, id=191, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png  used on input line 300.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png, id=192, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png  used on input line 307.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+<../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png, id=193, 578.16pt x 289.08pt>
+File: ../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png Graphic file (type png)
+<use ../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png>
+Package pdftex.def Info: ../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png  used on input line 314.
+(pdftex.def)             Requested size: 455.24411pt x 227.62082pt.
+(./informe.bbl [9 <../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png>]) [10 <../nuoct/analisis/4-secular/secular_plots/a_secular_plot.png> <../nuoct/analisis/4-secular/secular_plots/e_secular_plot.png>] [11 <../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png> <../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png> <../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png>] [12 <../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png> <../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png> <../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png>] [13 <../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png> <../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png>] [14 <../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png> <../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png>] [15 <../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png>] (./informe.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 )
@@ -505,21 +629,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 13E36BB24DA4A892BC5B3EEEAD8F9C04;2934.
+(rerunfilecheck)             Checksum: 456A0A1AEFD9B8F1548C95091335272A;2957.
  ) 
 Here is how much of TeX's memory you used:
- 13871 strings out of 476120
- 217983 string characters out of 5793656
- 1937975 words of memory out of 5000000
- 35644 multiletter control sequences out of 15000+600000
- 627674 words of font info for 92 fonts, out of 8000000 for 9000
+ 14061 strings out of 476120
+ 227699 string characters out of 5793656
+ 1938975 words of memory out of 5000000
+ 35798 multiletter control sequences out of 15000+600000
+ 651624 words of font info for 101 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 75i,11n,79p,1427b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,15n,79p,1423b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on informe.pdf (5 pages, 245837 bytes).
+Output written on informe.pdf (15 pages, 3381496 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 
