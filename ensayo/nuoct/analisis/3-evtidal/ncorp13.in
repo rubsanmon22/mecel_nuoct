@@ -61,8 +61,8 @@
         stellar tidal parameter Q'        : 1.0d6
         planet fluid Love numbers         : 0.33  0.38  
 	     planet moment inertia factor      : 0.33  0.254 
-        planetary tidal parameters Q'     : 1.0d5 1.0d6
-        planet densities [gr/cm^3]        : 1.33  1.4
+        planetary tidal parameters Q'     : 1.0d6 1.0d5
+        planet densities [gr/cm^3]        : 1.4  1.33
         planet rotational periods [days]  : 1.0   10.0  
    acceleration factor for tidal effects  : 1000.0
 

@@ -159,13 +159,20 @@ Para estudiar la dinámica del sistema $\nu$ Octantis, se realizaron simulacione
 
 Preliminarmente podemos notar que las simulaciones revelan que el sistema exhibe una estabilidad aparente en escalas de tiempo cortas (de hasta varios cientos de años). Sin embargo, al extender el análisis a intervalos temporales más largos, se observa que la configuración actual del sistema es inherentemente inestable, con el planeta $\nu$ Oct Ab siendo expulsado del sistema en la mayoría de las simulaciones después de unos 150 a 200 años. Este comportamiento sugiere que el sistema no se formó en su configuración actual, apoyando la hipótesis de un origen dinámico complejo. 
 
+Por lo propio, algunos analisis correspondientes a la dinamica a largo plazo (de hasta $10^{6}$ años) no se pudieron completar debido a la inestabilidad inherente del sistema, que conduce a la expulsión del planeta en escalas de tiempo mucho más cortas. Esto limitó la capacidad de evaluar completamente la evolución secular y las interacciones gravitacionales a largo plazo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GEOMETRÍA ORBITAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Análisis de la geometría orbital a corto plazo}
+
 
 En primera instancia nos interesa estudiar la geometría orbital del sistema en escalas de tiempo cortas, particularmente a un periodo de la estrella $\nu$ Oct B. Para ello, se graficaron las órbitas de los cuerpos principales del sistema, observando las interacciones gravitacionales y las posibles resonancias que puedan surgir en este intervalo temporal, de manera cualitativa.
 
-\begin{figure}[!h]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.94\textwidth]{../nuoct/analisis/1-orbitas/orbitas.png}
+    \includegraphics[width=0.8\textwidth]{../nuoct/analisis/1-orbitas/orbitas.png}
     \caption{Grafico de las órbitas del sistema $\nu$ Octantis en un periodo corto. (Imagen ilustrativa basada en datos de \cite{quarles2012stability})}
     \label{fig:nu_octantis_orbits}
 \end{figure}
@@ -174,54 +181,76 @@ Notamos al visualizar las órbitas (Ver Fig. \ref{fig:nu_octantis_orbits}) que e
 
 Pero mas impresionante aún es observar que la órbita del planeta es retrógrada con respecto al plano orbital de la binaria. Esta configuración retrógrada es inusual y plantea preguntas sobre su origen dinámico, ya que los modelos convencionales de formación planetaria no predicen fácilmente la existencia de planetas en órbitas retrógradas en sistemas binarios.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESTABILIDAD DINÁMICA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Mapeo de las regiones de estabilidad dinámica}
 
-Para evaluar la estabilidad dinámica del sistema, en primera instancia se calcula el MEGNO (Mean Exponential Growth factor of Nearby Orbits) para particulas de prueba. El MEGNO es un indicador caótico que permite identificar regiones de estabilidad e inestabilidad en el espacio de parámetros orbitales.
-
-Dichas particulas se encuentran inicialmente distribuidas en un intervalo de semiejes mayores (de 1.276 UA a 2.679 UA) y excentricidades fijas en 0, cubriendo un rango amplio de configuraciones posibles para el planeta $\nu$ Oct Ab, particularmente sobre un area que consideramos \textit{inestable}. Cada simulación se ejecuta durante un periodo de al rededor de 200 años, permitiendo observar la evolución del sistema en un intervalo temporal significativo (En realidad ese intervalo es el maximo de estabilidad alcanzado por el sistema, previo a la eyección del planeta). Seleccionamos algunas particulas de prueba que sobreviven a este intervalo para analizar su evolución a largo plazo.
+Para evaluar la estabilidad dinámica del sistema, en primera instancia se calcula el MEGNO (Mean Exponential Growth factor of Nearby Orbits) para particulas de prueba. El MEGNO es un indicador caótico que permite identificar regiones de estabilidad e inestabilidad en el espacio de parámetros orbitales. De manera resumida, valores de MEGNO cercanos a 2 indican órbitas estables, mientras que valores significativamente mayores sugieren comportamiento caótico e inestabilidad.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.94\textwidth]{../nuoct/analisis/2-estabilidad/particles_evolution.png}
+    \includegraphics[width=0.8\textwidth]{../nuoct/analisis/2-estabilidad/particles_evolution.png}
     \caption{Evolución de las partículas de prueba en el espacio de semieje mayor y excentricidad. Se incorpora MEGNO para identificar estabilidad en el tiempo simulado. Ninguna de las partículas ubicadas en la región cercana a la órbita del planeta $\nu$ Oct Ab logra mantener una órbita estable durante el periodo simulado.}
     \label{fig:particles_evolution}
 \end{figure}
+
+Dichas particulas se encuentran inicialmente distribuidas en un intervalo de semiejes mayores (de 1.276 UA a 2.679 UA) y excentricidades fijas en 0, cubriendo un rango amplio de configuraciones posibles para el planeta $\nu$ Oct Ab, particularmente sobre un area que consideramos \textit{inestable}. Cada simulación se ejecuta durante un periodo de al rededor de 200 años, permitiendo observar la evolución del sistema en un intervalo temporal significativo (En realidad ese intervalo es el maximo de estabilidad alcanzado por el sistema, previo a la eyección del planeta). Seleccionamos algunas particulas de prueba que sobreviven a este intervalo para analizar su evolución a largo plazo.
 
 Se observa que la mayoría de las partículas de prueba exhiben un comportamiento caótico, con valores elevados de MEGNO que indican inestabilidad dinámica (Ver Fig. \ref{fig:particles_evolution}). Ninguna de las particulas de prueba ubicadas en la región cercana a la órbita del planeta $\nu$ Oct Ab logra mantener una órbita estable durante el periodo simulado. Esto sugiere que la configuración actual del sistema es inherentemente inestable, reforzando la hipótesis de que el planeta no se formó en su ubicación actual.
 
 Más aún, graficando los valores de semieje mayor y excentricidad de las particulas de prueba en función del tiempo, se observa que las órbitas tienden a evolucionar hacia configuraciones más excéntricas y alejadas, lo que eventualmente conduce a la eyección del planeta del sistema.
 
+De manera anecdotica podemos visualizar los lobulos de Roche de las estrellas, para entender mejor las regiones de influencia gravitacional de cada cuerpo en el sistema (Ver Fig. \ref{fig:roche_lobes}).
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../nuoct/analisis/2-estabilidad/figures/roche_lobe_nuoct.png}
+    \caption{Representación de los lóbulos de Roche de las estrellas en el sistema $\nu$ Octantis. Los lóbulos de Roche delinean las regiones de influencia gravitacional de cada estrella, proporcionando una visión clara de las zonas donde la materia puede ser transferida o capturada.}
+    \label{fig:roche_lobes}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EVOLUCIÓN TIDAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Impacto de la evolución secular por efectos de marea}
 
 Para estudiar la evolucion secular de los elementos orbitales del sistema, se registraron las variaciones en los elementos orbitales osculadores del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B a lo largo del tiempo. Se analizaron las tendencias en el semieje mayor, excentricidad, inclinación y otros elementos relevantes.  
 
-Para esto se incorporaron efectos de marea en las simulaciones, utilizando parámetros de calidad $Q$ y radios estimados para las estrellas y el planeta. Estos efectos son cruciales para entender la evolución a largo plazo del sistema, ya que las fuerzas de marea pueden inducir cambios significativos en los elementos orbitales.
-
-Con la simulación de los efectos de marea, se observa que los elementos orbitales de la estrella $\nu$ Oct B muestran variaciones a lo largo del tiempo (Ver Fig. \ref{fig:secular_evolution_B}). La excentricidad presenta una tendencia decreciente, lo que sugiere que las fuerzas de marea están actuando para circularizar la órbita de la estrella secundaria. Este comportamiento es consistente con las expectativas teóricas, ya que las interacciones de marea tienden a disipar la energía orbital y reducir la excentricidad con el tiempo. Tambien cemos una disminución gradual en el semieje mayor, indicando que la órbita de la estrella secundaria se está contrayendo lentamente debido a las pérdidas de energía por marea.
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png}
+    \includegraphics[width=0.8\textwidth]{../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_B_3x2_up_to_140yr_points.png}
     \caption{Evolución secular de los elementos orbitales de la estrella $\nu$ Oct B, debido a las fuerzas de marea. }
     \label{fig:secular_evolution_B}
 \end{figure}
 
-Además se observa que los elementos orbitales del planeta $\nu$ Oct Ab experimentan variaciones significativas a lo largo del tiempo (Ver Fig. \ref{fig:secular_evolution_Ab}). La excentricidad  y el semieje mayor muestran tendencias oscilatorias, lo que indica que las fuerzas de marea están influyendo en la dinámica del planeta. Estas variaciones pueden contribuir a la inestabilidad observada en el sistema, ya que cambios en la excentricidad pueden llevar a encuentros cercanos más frecuentes con la estrella secundaria. Además vemos que el semieje mayor tiende a aumentar con el tiempo, lo que sugiere que el planeta está siendo empujado hacia órbitas más alejadas, conduciendo a su eventual expulsión del sistema, que de hecho podemos ver con simulaciones con un tiempo mayor a 160 años.
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png}
+    \includegraphics[width=0.8\textwidth]{../nuoct/analisis/3-evtidal/plots/tidal_analysis_Nu_Oct_Ab_3x2_up_to_140yr_points.png}
     \caption{Evolución secular de los elementos orbitales del planeta $\nu$ Oct Ab, debido a las fuerzas de marea. }
     \label{fig:secular_evolution_Ab}
 \end{figure}
 
+Para esto se incorporaron efectos de marea en las simulaciones, utilizando parámetros de calidad $Q$ y radios estimados para las estrellas y el planeta. Estos efectos son cruciales para entender la evolución a largo plazo del sistema, ya que las fuerzas de marea pueden inducir cambios significativos en los elementos orbitales. Para estas simulaciones se uso un valor de Q=$10^{6}$ para las estrellas y Q=$10^{5}$ para el planeta, valores típicos para cuerpos gaseosos y estelares. La densidad del planeta se estableció en 1.33 gr/cm$^{3}$, similar a la de Júpiter.
 
+Con la simulación de los efectos de marea, se observa que los elementos orbitales de la estrella $\nu$ Oct B muestran variaciones a lo largo del tiempo (Ver Fig. \ref{fig:secular_evolution_B}). La excentricidad presenta una tendencia decreciente, lo que sugiere que las fuerzas de marea están actuando para circularizar la órbita de la estrella secundaria. Este comportamiento es consistente con las expectativas teóricas, ya que las interacciones de marea tienden a disipar la energía orbital y reducir la excentricidad con el tiempo. Tambien vemos una disminución gradual en el semieje mayor, indicando que la órbita de la estrella secundaria se está contrayendo lentamente debido a las pérdidas de energía por marea.
+
+
+Además se observa que los elementos orbitales del planeta $\nu$ Oct Ab experimentan variaciones significativas a lo largo del tiempo (Ver Fig. \ref{fig:secular_evolution_Ab}). La excentricidad  y el semieje mayor muestran tendencias oscilatorias, lo que indica que las fuerzas de marea están influyendo en la dinámica del planeta. Estas variaciones pueden contribuir a la inestabilidad observada en el sistema, ya que cambios en la excentricidad pueden llevar a encuentros cercanos más frecuentes con la estrella secundaria. Además vemos que el semieje mayor tiende a aumentar con el tiempo, lo que sugiere que el planeta está siendo empujado hacia órbitas más alejadas, conduciendo a su eventual expulsión del sistema, que de hecho podemos ver con simulaciones con un tiempo mayor a 160 años.
+
+
+Ambos objetos muestran oscilaciones en la inclinación y en la longitud del nodo ascendente, lo que sugiere que las fuerzas de marea también están afectando la orientación de las órbitas en el espacio. Estos cambios pueden tener implicaciones importantes para la estabilidad a largo plazo del sistema, ya que variaciones en la inclinación pueden alterar las interacciones gravitacionales entre los cuerpos.
+
+Finalmente podemos decir que tanto el argumento del periastro como la anomalía media evolucionan de manera regular, indicando que las fuerzas de marea están induciendo precesión en las órbitas de ambos cuerpos. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EVOLUCIÓN SECULAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Interacciones gravitacionales a escalas de tiempo de hasta 200 años}
 
 Con simulaciones similares a las anteriores, pero sin incluir efectos de marea, se analizó la evolución de los elementos orbitales del sistema a lo largo de un periodo de hasta 200 años. Se registraron las variaciones en los elementos orbitales osculadores del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B.
 
-En primera instancia se analiza la evolución de los elementos orbitales de los cuerpos del sistema. Se ve de entrada que las variaciones del planeta $\nu$ Oct Ab son mucho más pronunciadas que las de la estrella $\nu$ Oct B (Ver Fig. \ref{fig:secular_a}, Fig. \ref{fig:secular_e}, Fig. \ref{fig:secular_i}, Fig. \ref{fig:secular_M}, Fig. \ref{fig:secular_O}, Fig. \ref{fig:secular_varpi} y Fig. \ref{fig:secular_w}). Esto es consistente con la expectativa de que el cuerpo menos masivo (el planeta) es más susceptible a las perturbaciones gravitacionales de los cuerpos más masivos (las estrellas).
+En primera instancia se analiza la evolución de los elementos orbitales de los cuerpos del sistema. Se ve de entrada que las variaciones del planeta $\nu$ Oct Ab son mucho más pronunciadas que las de la estrella $\nu$ Oct B (Ver Fig. \ref{fig:secular_a}, Fig. \ref{fig:secular_e} y Fig. \ref{fig:secular_varpi}.). Esto es consistente con la expectativa de que el cuerpo menos masivo (el planeta) es más susceptible a las perturbaciones gravitacionales de los cuerpos más masivos (las estrellas).
 
 \begin{figure}[h]
     \centering
@@ -239,88 +268,204 @@ En primera instancia se analiza la evolución de los elementos orbitales de los 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_plots/inc_secular_plot.png}
-    \caption{Evolución secular de la inclinación del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B. }
-    \label{fig:secular_i}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_plots/M_secular_plot.png}
-    \caption{Evolución secular de la anomalía media del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B. }
-    \label{fig:secular_M}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_plots/O_secular_plot.png}
-    \caption{Evolución secular de la longitud del nodo ascendente del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B. }
-    \label{fig:secular_O}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
     \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_plots/varpi_secular_plot.png}
     \caption{Evolución secular de la longitud del pericentro del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B. }
     \label{fig:secular_varpi}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_plots/w_secular_plot.png}
-    \caption{Evolución secular del argumento del pericentro del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B. }
-    \label{fig:secular_w}
-\end{figure}
 
-Se aplicó un análisis de Fourier a las series temporales de los elementos orbitales para identificar las frecuencias dominantes que caracterizan la dinámica secular del sistema. Este análisis reveló la presencia de varias frecuencias significativas, indicando que el sistema exhibe un comportamiento dinámico complejo con múltiples modos de oscilación (Ver Fig. \ref{fig:fft_secular_planet_a}, Fig. \ref{fig:fft_secular_planet_e}, Fig. \ref{fig:fft_secular_planet_i}, Fig. \ref{fig:fft_secular_planet_M}, Fig. \ref{fig:fft_secular_planet_O} y Fig. \ref{fig:fft_secular_planet_varpi}).
+Se aplicó un análisis de Fourier a las series temporales de los elementos orbitales para identificar las frecuencias dominantes que caracterizan la dinámica secular del sistema. Este análisis reveló la presencia de varias frecuencias significativas, indicando que el sistema exhibe un comportamiento dinámico complejo con múltiples modos de oscilación. En primera instancia estudiamos el comportamiento del planeta (Ver Fig. \ref{fig:fft_secular_planet_a}, Fig. \ref{fig:fft_secular_planet_e}y Fig. \ref{fig:fft_secular_planet_varpi} en Anexo I.).
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png}
-    \caption{Análisis de Fourier del semieje mayor del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_a}
-\end{figure}
+Si bien se encuentran marcadas las primeras 10 frecuencias dominantes, no todas corresponden a modos seculares claros. Algunas son solo valores cercanos a picos de ruido en el análisis de Fourier. Teniendo en cuenta estos detalles se seleccionan aquellas que consideramos relevantes para describir la dinámica secular del sistema (Ver Tabla \ref{tab:dominant_freq_Ab_a}, Tabla \ref{tab:dominant_freq_Ab_e} y Tabla \ref{tab:dominant_freq_Ab_varpi} en Anexo I.).
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png}
-    \caption{Análisis de Fourier de la excentricidad del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_e}
-\end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_inc_fft_top10.png}
-    \caption{Análisis de Fourier de la inclinación del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_i}
-\end{figure}
+Haciendo un análisis similar para la estrella $\nu$ Oct B (Ver Fig. \ref{fig:fft_secular_secundaria_a}, Fig. \ref{fig:fft_secular_secundaria_e} y Fig. \ref{fig:fft_secular_secundaria_varpi} en Anexo I.), se identifican las frecuencias dominantes que caracterizan su dinámica secular (Ver Tabla \ref{tab:dominant_freq_B_a}, Tabla \ref{tab:dominant_freq_B_e} y Tabla \ref{tab:dominant_freq_B_varpi} en Anexo I.).
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_M_fft_top10.png}
-    \caption{Análisis de Fourier de la anomalía media del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_M}
-\end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_O_fft_top10.png}
-    \caption{Análisis de Fourier de la longitud del nodo ascendente del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_O}
-\end{figure}
+Cabe destacar que el analisis de las frecuencias mas notables es similar al realizado para el planeta, donde se seleccionan aquellas que consideramos relevantes para describir la dinámica secular del sistema, descartando picos de ruido en el análisis de Fourier.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png}
-    \caption{Análisis de Fourier de la longitud del pericentro del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
-    \label{fig:fft_secular_planet_varpi}
-\end{figure}
+En general notamos algunas frecuencias comunes entre el planeta y la estrella secundaria, particularmente aquellas con periodo de 160 años que estan relacionadas al tiempo total de la simulación. Estas frecuencias compartidas sugieren interacciones gravitacionales complejas entre ambos cuerpos que influyen en su evolución orbital conjunta. Por esto es que apesar de declararlas como relevantes, no las consideramos para describir la dinámica secular del sistema.
+
+En la excentricidad del planeta, la frecuencia mas notable corresponde a un periodo de 26.6 años, lo que sugiere un ciclo de oscilación relativamente corto en la excentricidad debido a las perturbaciones gravitacionales de la estrella secundaria. En la excentricidad de la estrella secundaria, la frecuencia mas notable corresponde a un periodo de 8.05 años, indicando un ciclo de oscilación aún más corto en su excentricidad.
+
+Tambien notamos que las frecuencias dominantes en la longitud del pericentro de la estrella secundaria tiene asociado un periodo de 32,2 años, mientras que en la longitud del pericentro del planeta, la frecuencia dominante tiene un periodo de 17.78 años. Estas diferencias en los periodos sugieren que las precesiones de las órbitas del planeta y la estrella secundaria están influenciadas por diferentes mecanismos dinámicos, posiblemente relacionados con sus masas y distancias relativas.
+
+La falta de resolución en frecuencia debido al corto intervalo temporal de las simulaciones (200 años) limita la precisión con la que se pueden identificar las frecuencias dominantes. Sin embargo, los resultados obtenidos proporcionan una visión valiosa de la dinámica secular del sistema $\nu$ Octantis y sugieren que las interacciones gravitacionales complejas entre el planeta y las estrellas juegan un papel crucial en su evolución a largo plazo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DISCUSIÓN Y CONCLUSIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discusión y Conclusiones}
+
+Nuestro análisis dinámico del sistema $\nu$ Octantis utilizando el integrador numérico NCORP ha revelado varios aspectos clave sobre su comportamiento y viabilidad a lo largo del tiempo. 
+
+En primer lugar, la geometría orbital del sistema en escalas de tiempo cortas muestra que el planeta $\nu$ Oct Ab tiene una órbita retrógrada con respecto al plano orbital de la binaria, lo que plantea preguntas sobre su origen dinámico. Las interacciones gravitacionales significativas entre el planeta y la estrella secundaria sugieren que estas perturbaciones pueden inducir variaciones en los elementos orbitales del planeta, afectando su estabilidad a largo plazo.
+
+Esto se confirma al realizar el mapeo de las regiones de estabilidad dinámica mediante el cálculo del MEGNO ha indicado que la configuración actual del sistema es inherentemente inestable. Ninguna de las partículas de prueba ubicadas en la región cercana a la órbita del planeta logra mantener una órbita estable durante el periodo simulado, lo que refuerza la hipótesis de que el planeta no se formó en su ubicación actual.
+
+Además el análisis de la evolución secular por efectos de marea ha mostrado que las fuerzas de marea están influyendo en la dinámica del sistema, induciendo cambios significativos en los elementos orbitales tanto de la estrella secundaria como del planeta. Estos cambios pueden contribuir a la inestabilidad observada en el sistema, ya que variaciones en la excentricidad pueden llevar a encuentros cercanos más frecuentes con la estrella secundaria.
+
+Finalmente, el análisis de las interacciones gravitacionales a escalas de tiempo de hasta 200 años ha revelado un comportamiento dinámico complejo con múltiples modos de oscilación. Al menos en función de lo que pudimos determinar, dada la poca resolución temporal de las simulaciones. Las frecuencias dominantes identificadas mediante el análisis de Fourier proporcionan una visión valiosa de la dinámica secular del sistema y sugieren que las interacciones gravitacionales complejas entre el planeta y las estrellas juegan un papel crucial en su evolución a largo plazo.
+
+Si bien las simulaciones numéricas realizadas presentan limitaciones debido a la inestabilidad inherente del sistema $\nu$ Octantis, los resultados obtenidos ofrecen una visión valiosa de su dinámica compleja.
+
+Para mejorar el analisis de los resultados obtenidos, futuras investigaciones podrían considerar:
+\begin{itemize}
+    \item Extender el intervalo temporal de las simulaciones para capturar mejor la evolución secular y las interacciones gravitacionales a largo plazo.
+    \item Incorporar efectos adicionales, como la radiación estelar y la disipación de energía, para evaluar su impacto en la dinámica del sistema.
+    \item Realizar un análisis más detallado de las resonancias orbitales y su influencia en la estabilidad del planeta.
+\item Aumentar la resolución en el análisis de Fourier mediante simulaciones más largas o técnicas avanzadas de procesamiento de señales.
+    \item Explorar diferentes configuraciones iniciales para evaluar la sensibilidad del sistema a variaciones en los parámetros orbitales.
+\end{itemize}
+
+
+Al ser la intestabilidad del sistema un factor limitante en este estudio, futuras investigaciones podrían enfocarse en identificar configuraciones iniciales que permitan una mayor estabilidad a largo plazo, facilitando un análisis más profundo de la dinámica secular y las interacciones gravitacionales.
+
+Si bien son varias las teorías propuestas para explicar el origen del sistema $\nu$ Octantis, los resultados de este análisis dinámico no son concluyentes en favor de una hipótesis específica. Sin embargo, la evidencia de inestabilidad dinámica y las complejas interacciones gravitacionales sugieren que el sistema podría haberse formado en un entorno diferente o haber experimentado eventos dinámicos significativos que alteraron su configuración original.
+
+No hay en esta sintesis espacio suficiente para discutir todos los detalles y resultados obtenidos para este sistema a lo largo del tiempo, pero en resumen podemos concluir que el sistema $\nu$ Octantis presenta una dinámica compleja e inestable que desafía los modelos convencionales de formación planetaria. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFÍA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{plainnat} 
 \bibliography{bibliografia}
+
+\clearpage
+\appendix
+\section{Anexo: Gráficos de Fourier y tablas de picos relevantes}
+En esta sección se presentan los gráficos de análisis de Fourier y las tablas correspondientes a las frecuencias dominantes identificadas para los elementos orbitales del planeta $\nu$ Oct Ab y de la estrella $\nu$ Oct B.
+
+Cabe aclarar que la resolución en frecuencia está limitada por el intervalo temporal de las simulaciones (200 años), lo que afecta la precisión con la que se pueden identificar las frecuencias dominantes.
+
+El criterio de selección de las frecuencias relevantes se basa en la identificación de picos significativos en el análisis de Fourier, descartando aquellos que se consideran ruido.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_a_fft_top10.png}
+    \caption{Análisis de Fourier del semieje mayor del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_planet_a}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud (UA)} & \textbf{Periodo  (yr)} \\ \hline
+\textbf{1} & 0.00625 & 0.03660920 & 160     \\ \hline
+\textbf{2} & 0.42500 & 0.01104750 & 2.35294 \\ \hline
+\textbf{3} & 0.49375 & 0.01023200 & 2.02532 \\ \hline
+\textbf{9} & 0.23125 & 0.00788955 & 4.32432 \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para el semieje mayor del planeta $\nu$ Oct Ab.}
+\label{tab:dominant_freq_Ab_a}
+\end{table}
+
+\clearpage
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_e_fft_top10.png}
+    \caption{Análisis de Fourier de la excentricidad del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_planet_e}
+\end{figure}
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud} & \textbf{Periodo  (yrs)} \\ \hline
+\textbf{1}     & 0.0375                          & 0.0358587         & 26.6667                 \\ \hline
+\textbf{4}     & 0.0875                          & 0.0173523         & 11.4286                 \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para la excentricidad del planeta $\nu$ Oct Ab.}
+\label{tab:dominant_freq_Ab_e}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/planet_varpi_fft_top10.png}
+    \caption{Análisis de Fourier de la longitud del pericentro del planeta $\nu$ Oct Ab, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_planet_varpi}
+\end{figure}
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud (°)} & \textbf{Periodo  (yrs)} \\ \hline
+\textbf{1}     & 0.00625                         & 2.63815               & 160                     \\ \hline
+\textbf{6}     & 0.05625                         & 0.283026              & 17.7778                 \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para la longitud del pericentro del planeta $\nu$ Oct Ab.}
+\label{tab:dominant_freq_Ab_varpi}
+\end{table}
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/secundaria_a_fft_top15.png}
+    \caption{Análisis de Fourier del semieje mayor del planeta $\nu$ Oct B, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_secundaria_a}
+\end{figure}
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud (UA)} & \textbf{Periodo  (yrs)} \\ \hline
+\textbf{1}  & 0.00621118 & 0.000390661 & 161     \\ \hline
+\textbf{6}  & 0.12422400 & 0.000120278 & 8.05000 \\ \hline
+\textbf{10} & 0.44099400 & 9.65963e-05 & 2.26761 \\ \hline
+\textbf{14} & 0.22360200 & 7.25797e-05 & 4.47222 \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para el semieje mayor de la estrella secundaria $\nu$ Oct B.}
+\label{tab:dominant_freq_B_a}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/secundaria_e_fft_top15.png}
+    \caption{Análisis de Fourier de la excentricidad del planeta $\nu$ Oct B, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_secundaria_e}
+\end{figure}
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud} & \textbf{Periodo  (yrs)} \\ \hline
+\textbf{1}  & 0.00621118 & 8.33426e-05 & 161     \\ \hline
+\textbf{2}  & 0.12422400 & 6.37534e-05 & 8.0500  \\ \hline
+\textbf{9}  & 0.34782600 & 2.95969e-05 & 2.8750  \\ \hline
+\textbf{13} & 0.20496900 & 2.71284e-05 & 4.87879 \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para la excentricidad de la estrella secundaria $\nu$ Oct B.}
+\label{tab:dominant_freq_B_e}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{../nuoct/analisis/4-secular/secular_fft_plots/secundaria_varpi_fft_top15.png}
+    \caption{Análisis de Fourier de la longitud del pericentro del planeta $\nu$ Oct B, mostrando las frecuencias dominantes. }
+    \label{fig:fft_secular_secundaria_varpi}
+\end{figure}
+
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Orden} & \textbf{Frecuencia ($yr^{-1}$)} & \textbf{Amplitud (°)} & \textbf{Periodo  (yrs)} \\ \hline
+\textbf{1}  & 0.00621118 & 0.003776590 & 161      \\ \hline
+\textbf{3}  & 0.03105590 & 0.000619470 & 32.20000 \\ \hline
+\textbf{5}  & 0.12422400 & 0.000265197 & 8.05000  \\ \hline
+\textbf{9}  & 0.22360200 & 0.000197407 & 4.47222  \\ \hline
+\textbf{14} & 0.34782600 & 0.000145136 & 2.87500  \\ \hline
+\end{tabular}
+\caption{Frecuencias dominantes seleccionadas para la longitud del pericentro de la estrella secundaria $\nu$ Oct B.}
+\label{tab:dominant_freq_B_varpi}
+\end{table}
 
 
 \end{document}
